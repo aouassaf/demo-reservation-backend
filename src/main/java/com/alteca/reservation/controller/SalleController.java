@@ -14,6 +14,22 @@ import com.alteca.reservation.dto.AvailabilityResponse;
 import com.alteca.reservation.model.Salle;
 import com.alteca.reservation.service.SalleService;
 
+/**
+ * REST controller for managing Salle (room) resources.
+ * <p>
+ * Provides endpoints to retrieve all salles and check the availability of a specific salle
+ * within a given time range.
+ * </p>
+ *
+ * <ul>
+ *   <li><b>GET /api/salles</b>: Retrieve the list of all salles.</li>
+ *   <li><b>GET /api/salles/check-availability</b>: Check if a salle is available between two dates.</li>
+ * </ul>
+ *
+ * Cross-origin requests are allowed.
+ *
+ * @author YourName
+ */
 @RestController
 @RequestMapping("/api/salles")
 @CrossOrigin

@@ -51,5 +51,11 @@ public class SalleService {
         System.out.println("✅ Salle libre");
         return new AvailabilityResponse(true, null);
     }
+     public List<Reservation> getReservationsBySalleAndDate(String salle, LocalDateTime date) {
+        List<Reservation> reservations = reservationRepository.findBySalle(salle);
+        return reservations.stream()
+                .filter(r -> (r.getDebut().toLocalDate().equals(date.toLocalDate())))
+                .toList();
+    }
 
 }

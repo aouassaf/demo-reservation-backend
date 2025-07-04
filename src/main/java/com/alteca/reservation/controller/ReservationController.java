@@ -66,7 +66,7 @@ public class ReservationController {
 
     @GetMapping("/date")
     public List<Reservation> getAfterDate(@RequestParam String date) {
-        LocalDateTime d = LocalDateTime.parse(date); // Format ISO
+        LocalDateTime d = LocalDateTime.of(date);
         return service.getByDate(d);
     }
 
