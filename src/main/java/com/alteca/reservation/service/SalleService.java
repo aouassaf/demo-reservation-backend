@@ -27,14 +27,6 @@ public class SalleService {
         return repository.findAll();
     }
 
-    /**
-     * Vérifie la disponibilité d'une salle pour un créneau donné.
-     * 
-     * @param salle Nom de la salle
-     * @param debut Début du créneau
-     * @param fin   Fin du créneau
-     * @return true si la salle est disponible, false sinon
-     */
     public AvailabilityResponse checkAvailability(String salle, LocalDateTime debut, LocalDateTime fin) {
         List<Reservation> reservations = reservationRepository.findBySalle(salle);
         LocalDateTime now = LocalDateTime.now();
