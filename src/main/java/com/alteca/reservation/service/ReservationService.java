@@ -22,12 +22,6 @@ public class ReservationService {
         return repository.findAll();
     }
 
-    /**
-     * Récupère la liste des réservations pour la salle spécifiée.
-     *
-     * @param salle le nom ou l'identifiant de la salle pour filtrer les réservations
-     * @return une liste d'objets {@link Reservation} associés à la salle donnée
-     */
     public List<Reservation> getBySalle(String salle) {
         return repository.findBySalle(salle);
     }
